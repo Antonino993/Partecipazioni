@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Nostre Nozze - Partecipazione Digitale</title>
+    <style>
+        :root {
+            --primary-color: #e8d3c7;
+            --secondary-color: #a67c52;
+            --accent-color: #8b7355;
+            --text-color: #333;
+            --light-color: #f9f5f2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .couple-names {
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            margin: 20px 0;
+        }
+        
+        .date {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+        
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 400;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .detail-item {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .detail-item i {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .rsvp-form {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        input, select, textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: var(--accent-color);
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .gallery-item {
+            height: 150px;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .couple-names {
+                font-size: 2.2rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .date {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Con grande gioia</h1>
+            <div class="couple-names">Anna & Marco</div>
+            <div class="date">15 Giugno 2024</div>
+            <p>Vi invitiamo a condividere con noi questo giorno speciale</p>
+        </header>
+        
+        <section class="section">
+            <h2>La Nostra Storia</h2>
+            <p>Ci siamo incontrati per caso in una calda giornata d'estate, e da quel momento le nostre vite si sono intrecciate in un viaggio meraviglioso. Dopo cinque anni di avventure, risate e crescita insieme, siamo felici di poter celebrare il nostro amore con le persone più care.</p>
+            <p>Non vediamo l'ora di condividere con voi questo passo importante della nostra vita.</p>
+        </section>
+        
+        <section class="section">
+            <h2>I Dettagli della Celebrazione</h2>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <i>💒</i>
+                    <h3>Cerimonia</h3>
+                    <p>Chiesa di San Giovanni<br>Via Roma, 123<br>Ore 15:30</p>
+                </div>
+                <div class="detail-item">
+                    <i>🍽️</i>
+                    <h3>Ricevimento</h3>
+                    <p>Villa Bianca<br>Via dei Fiori, 45<br>Ore 17:00</p>
+                </div>
+                <div class="detail-item">
+                    <i>🎵</i>
+                    <h3>Festeggiamenti</h3>
+                    <p>Musica, balli e divertimento fino a tarda notte</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Conferma la Tua Partecipazione</h2>
+            <form class="rsvp-form" id="rsvpForm">
+                <div class="form-group">
+                    <label for="name">Nome e Cognome *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Numero di ospiti *</label>
+                    <select id="guests" name="guests" required>
+                        <option value="" disabled selected>Seleziona</option>
+                        <option value="1">Solo io</option>
+                        <option value="2">2 persone</option>
+                        <option value="3">3 persone</option>
+                        <option value="4">4 persone</option>
+                        <option value="5">5 o più persone</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="attendance">Parteciperai a:</label>
+                    <select id="attendance" name="attendance">
+                        <option value="both">Cerimonia e ricevimento</option>
+                        <option value="ceremony">Solo cerimonia</option>
+                        <option value="reception">Solo ricevimento</option>
+                        <option value="none">Purtroppo non posso partecipare</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Messaggio per gli sposi (opzionale)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                
+                <button type="submit">Invia Conferma</button>
+            </form>
+        </section>
+        
+        <section class="section">
+            <h2>La Nostra Galleria</h2>
+            <div class="gallery">
+                <div class="gallery-item">Foto 1</div>
+                <div class="gallery-item">Foto 2</div>
+                <div class="gallery-item">Foto 3</div>
+                <div class="gallery-item">Foto 4</div>
+                <div class="gallery-item">Foto 5</div>
+                <div class="gallery-item">Foto 6</div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Lista Nozze</h2>
+            <p>Il vostro affetto e la vostra presenza sono il regalo più grande che possiate farci. Se desiderate comunque farci un pensiero, abbiamo creato una lista nozze presso i seguenti negozi:</p>
+            <ul style="list-style-type: none; padding: 15px 0;">
+                <li style="padding: 5px 0;">• Negozio ABC - Via Esempio, 10</li>
+                <li style="padding: 5px 0;">• Centro Commerciale XYZ - Piano 2</li>
+                <li style="padding: 5px 0;">• Oppure contributo per il nostro viaggio di nozze</li>
+            </ul>
+        </section>
+        
+        <footer>
+            <p>Grazie per far parte della nostra storia d'amore</p>
+            <p>Anna & Marco</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Qui normalmente invieresti i dati a un server
+            // Per questa demo, mostriamo solo un alert
+            alert('Grazie per la tua conferma! Ti aspettiamo al nostro matrimonio.');
+            
+            // Reset del form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
