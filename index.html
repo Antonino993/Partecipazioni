@@ -6,12 +6,11 @@
     <title>Le Nostre Nozze - Partecipazione Digitale</title>
     <style>
         :root {
-            /* Palette Rosa Antico e Verde Salvia */
-            --primary-color: #A3B18A;   /* Verde Salvia (per l'header) */
-            --secondary-color: #E0B6B9; /* Rosa Antico (per bottoni e dettagli) */
-            --accent-color: #D1A3A8;    /* Rosa Antico Scuro (per titoli e hover) */
-            --text-color: #4A574F;      /* Grigio-Verde Scuro (Testo) */
-            --background-color: #F9F7F5; /* Sfondo neutro (Beige chiarissimo) */
+            --primary-color: #A3B18A;
+            --secondary-color: #E0B6B9;
+            --accent-color: #D1A3A8;
+            --text-color: #4A574F;
+            --background-color: #F9F7F5;
             --white-color: #FFFFFF;
         }
         
@@ -26,24 +25,25 @@
             background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.6;
-            text-align: center; 
+            min-height: 100vh;
             display: flex;
-            flex-direction: column;
-            align-items: center; 
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px 0;
         }
         
         .container {
             max-width: 800px;
-            width: 100%; 
+            width: 100%;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
         
         header {
             text-align: center;
-            padding: 40px 0;
-            background-color: var(--primary-color); /* Sfondo Verde Salvia */
-            color: var(--white-color); /* Testo Bianco per contrasto */
+            padding: 40px 20px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
             border-radius: 10px;
             margin-bottom: 30px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -68,22 +68,32 @@
             color: var(--white-color);
         }
         
+        header p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+        
         .section {
-            background: var(--white-color); 
+            background: var(--white-color);
             padding: 30px;
             margin-bottom: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: left; 
         }
         
         h2 {
-            color: var(--accent-color); /* Rosa Antico Scuro */
+            color: var(--accent-color);
             margin-bottom: 20px;
-            text-align: center; 
+            text-align: center;
             font-weight: 400;
-            border-bottom: 1px solid var(--secondary-color); /* Sottolineatura Rosa Antico */
+            border-bottom: 1px solid var(--secondary-color);
             padding-bottom: 10px;
+        }
+        
+        h3 {
+            text-align: center;
+            margin: 10px 0;
+            color: var(--text-color);
         }
         
         .details-grid {
@@ -100,37 +110,50 @@
         
         .detail-item i {
             font-size: 2rem;
-            color: var(--secondary-color); /* Rosa Antico */
             margin-bottom: 10px;
+            display: block;
+        }
+        
+        .detail-item p {
+            margin-top: 10px;
+            line-height: 1.8;
         }
         
         .rsvp-form {
-            display: grid;
+            display: flex;
+            flex-direction: column;
             gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         .form-group {
             display: flex;
             flex-direction: column;
-            text-align: left; 
+            text-align: left;
         }
         
         label {
             margin-bottom: 5px;
             font-weight: 500;
-            color: var(--accent-color); /* Rosa Antico Scuro */
+            color: var(--accent-color);
         }
         
         input, select, textarea {
             padding: 12px;
-            border: 1px solid var(--secondary-color); /* Bordo Rosa Antico */
+            border: 1px solid var(--secondary-color);
             border-radius: 5px;
             font-size: 1rem;
             color: var(--text-color);
+            width: 100%;
+        }
+        
+        textarea {
+            resize: vertical;
         }
         
         button {
-            background-color: var(--secondary-color); /* Rosa Antico */
+            background-color: var(--secondary-color);
             color: var(--white-color);
             border: none;
             padding: 15px;
@@ -139,61 +162,128 @@
             cursor: pointer;
             transition: background-color 0.3s;
             margin-top: 10px;
+            width: 100%;
         }
         
         button:hover {
-            background-color: var(--accent-color); /* Rosa Antico Scuro (hover) */
+            background-color: var(--accent-color);
         }
         
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            margin-top: 20px;
-        }
-        
-        .gallery-item {
-            height: 150px;
-            background-color: var(--secondary-color); /* Rosa Antico */
+        .info-text {
+            text-align: center;
+            margin: 25px 0;
+            color: var(--accent-color);
+            padding: 15px;
+            background-color: rgba(224, 182, 185, 0.1);
             border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white-color);
-            font-weight: bold;
+            line-height: 1.8;
         }
         
         footer {
             text-align: center;
-            padding: 20px;
-            color: var(--accent-color); /* Rosa Antico Scuro */
+            padding: 30px 20px;
+            color: var(--accent-color);
             font-size: 0.9rem;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        /* Media query per tablet */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .couple-names {
+                font-size: 2.5rem;
+            }
+            
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         /* Media query per mobile */
         @media (max-width: 600px) {
+            body {
+                padding: 10px 0;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            header {
+                padding: 30px 15px;
+                margin-bottom: 20px;
+            }
+            
             .couple-names {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .date {
                 font-size: 1.2rem;
             }
-
-            .container {
-                padding: 15px; 
+            
+            header p {
+                font-size: 1rem;
             }
-
+            
             .section {
-                padding: 20px; 
+                padding: 20px 15px;
+                margin-bottom: 20px;
             }
-
-            .details-grid {
-                grid-template-columns: 1fr; 
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .detail-item {
+                padding: 10px;
+            }
+            
+            .detail-item i {
+                font-size: 1.5rem;
+            }
+            
+            .detail-item h3 {
+                font-size: 1.1rem;
+            }
+            
+            .detail-item p {
+                font-size: 0.95rem;
+            }
+            
+            .info-text {
+                font-size: 0.95rem;
+                padding: 12px;
+            }
+            
+            input, select, textarea {
+                font-size: 16px; /* Previene lo zoom automatico su iOS */
+            }
+            
+            button {
+                padding: 12px;
+                font-size: 1rem;
+            }
+        }
+        
+        /* Media query per schermi molto piccoli */
+        @media (max-width: 400px) {
+            .couple-names {
+                font-size: 1.7rem;
+            }
+            
+            .date {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -212,12 +302,12 @@
                 <div class="detail-item">
                     <i>💒</i>
                     <h3>Cerimonia</h3>
-                    <p>Chiesa Madre di Santa Maria della Provvidenza<br>Via Roma, 317, 95019 Zafferana Etnea CT<br>Ore 16:30</p>
+                    <p>Chiesa Madre di Santa Maria della Provvidenza<br>Via Roma, 317<br>95019 Zafferana Etnea CT<br>Ore 16:30</p>
                 </div>
                 <div class="detail-item">
                     <i>🍽️</i>
                     <h3>Ricevimento</h3>
-                    <p>La Casa del Grecale<br>Via Santa Caterina, 51, 95024 Acireale CT<br>Ore 19:30</p>
+                    <p>La Casa del Grecale<br>Via Santa Caterina, 51<br>95024 Acireale CT<br>Ore 19:30</p>
                 </div>
             </div>
         </section>
@@ -258,20 +348,23 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="child">Numero di bambini (dai 2 ai 10 anni) per l'animazione </label>
-                    <select id="child" name="child" >
+                    <label for="child">Numero di bambini (dai 2 ai 10 anni) per l'animazione</label>
+                    <select id="child" name="child">
                         <option value="" disabled selected>Seleziona</option>
+                        <option value="0">Nessun bambino</option>
                         <option value="1">1 bambino</option>
                         <option value="2">2 bambini</option>
                         <option value="3">3 bambini</option>
                     </select>
                 </div>
                 
-                <h3 style="text-align: center; margin-top: 25px; color: var(--accent-color);">Per i piccoli ospiti che saranno presenti, e per poter organizzare al meglio i posti a sedere e l'animazione, vi chiediemo di specificare le vostre preferenze:</h3>
+                <div class="info-text">
+                    Per i piccoli ospiti che saranno presenti, e per poter organizzare al meglio i posti a sedere e l'animazione, vi chiediamo di specificare le vostre preferenze:
+                </div>
                 
                 <div class="form-group">
-                    <label for="choise">I nostri figli siederanno a tavono con noi o andranno con l'animatore </label>
-                    <select id="choise" name="choise" >
+                    <label for="choise">I nostri figli siederanno a tavola con noi o andranno con l'animatore</label>
+                    <select id="choise" name="choise">
                         <option value="" disabled selected>Seleziona</option>
                         <option value="1">Seduti con noi</option>
                         <option value="2">Con l'animatore</option>
@@ -280,12 +373,12 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="menuchild">I nostri figli desiderano usufruire del menù bambini </label>
-                    <select id="menuchild" name="menuchild" >
+                    <label for="menuchild">I nostri figli desiderano usufruire del menù bambini</label>
+                    <select id="menuchild" name="menuchild">
                         <option value="" disabled selected>Seleziona</option>
-                        <option value="1">Si</option>
+                        <option value="1">Sì</option>
                         <option value="2">No</option>
-                        <option value="3">Uno si, uno no</option>
+                        <option value="3">Uno sì, uno no</option>
                     </select>
                 </div>
                 
@@ -300,7 +393,7 @@
         
         <footer>
             <p>Grazie di far parte della nostra storia d'amore</p>
-            <p>Antonino & Carla</p>
+            <p><strong>Antonino & Carla</strong></p>
         </footer>
     </div>
 
@@ -308,10 +401,8 @@
         document.querySelector('.rsvp-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Simula l'invio
             alert('Grazie per la tua conferma! Ti aspettiamo al nostro matrimonio.');
             
-            // Reset del form
             this.reset();
         });
     </script>
