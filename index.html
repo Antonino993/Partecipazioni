@@ -208,6 +208,16 @@
             <label for="email">Email *</label>
             <input type="email" id="email" name="email" required>
         </div>
+
+        <div class="form-group">
+            <label for="attendance">Parteciperai a:</label>
+            <select id="attendance" name="attendance">
+                <option value="both">Cerimonia e ricevimento</option>
+                <option value="ceremony">Solo cerimonia</option>
+                <option value="reception">Solo ricevimento</option>
+                <option value="none">Purtroppo non posso partecipare</option>
+            </select>
+        </div>
         
         <div class="form-group">
             <label for="guests">Numero di ospiti adulti *</label>
@@ -231,15 +241,15 @@
             </select>
         </div>
         
-        <h3>Per i bambini che saranno presenti, vi chiediemo di specificare le loro esigenze:</h3>
+        <h3>Per i piccoli ospiti che saranno presenti, e per poter organizzare al meglio i posti a sedere e l'animazione, vi chiediemo di specificare le vostre preferenze:</h3>
         
         <div class="form-group">
             <label for="choise">I nostri figli siederanno a tavono con noi o andranno con l'animatore </label>
             <select id="choise" name="choise" >
                 <option value="" disabled selected>Seleziona</option>
-                <option value="1">Con noi</option>
+                <option value="1">Seduti con noi</option>
                 <option value="2">Con l'animatore</option>
-                <option value="3">Uno con noi uno andrà con l'animatore</option>
+                <option value="3">Uno seduto con noi mentre l'altro andrà con l'animatore</option>
             </select>
         </div>
 
@@ -249,17 +259,7 @@
                 <option value="" disabled selected>Seleziona</option>
                 <option value="1">Si</option>
                 <option value="2">No</option>
-                <option value="3">Uno si uno no</option>
-            </select>
-        </div>
-        
-        <div class="form-group">
-            <label for="attendance">Parteciperai a:</label>
-            <select id="attendance" name="attendance">
-                <option value="both">Cerimonia e ricevimento</option>
-                <option value="ceremony">Solo cerimonia</option>
-                <option value="reception">Solo ricevimento</option>
-                <option value="none">Purtroppo non posso partecipare</option>
+                <option value="3">Uno si, uno no</option>
             </select>
         </div>
         
