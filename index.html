@@ -6,11 +6,11 @@
     <title>Le Nostre Nozze - Partecipazione Digitale</title>
     <style>
         :root {
-            --primary-color: #e8d3c7;
-            --secondary-color: #a67c52;
-            --accent-color: #8b7355;
-            --text-color: #333;
-            --light-color: #f9f5f2;
+            --primary-color: #F7D9E3;   /* Rosa Cipria */
+            --secondary-color: #94B49F;  /* Verde Salvia */
+            --accent-color: #708A7E;    /* Verde Salvia Scuro (per titoli e hover) */
+            --text-color: #4A574F;      /* Grigio-Verde Scuro (testo) */
+            --light-color: #FCF8F7;     /* Sfondo Rosa Chiarissimo */
         }
         
         * {
@@ -35,6 +35,7 @@
         header {
             text-align: center;
             padding: 40px 0;
+            /* Nuovo gradiente da Rosa a Verde */
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             border-radius: 10px;
@@ -68,11 +69,11 @@
         }
         
         h2 {
-            color: var(--accent-color);
+            color: var(--accent-color); /* Verde Scuro */
             margin-bottom: 20px;
             text-align: center;
             font-weight: 400;
-            border-bottom: 1px solid var(--primary-color);
+            border-bottom: 1px solid var(--primary-color); /* Sottolineatura Rosa */
             padding-bottom: 10px;
         }
         
@@ -90,7 +91,7 @@
         
         .detail-item i {
             font-size: 2rem;
-            color: var(--secondary-color);
+            color: var(--secondary-color); /* Verde Salvia */
             margin-bottom: 10px;
         }
         
@@ -117,7 +118,7 @@
         }
         
         button {
-            background-color: var(--secondary-color);
+            background-color: var(--secondary-color); /* Verde Salvia */
             color: white;
             border: none;
             padding: 15px;
@@ -128,7 +129,7 @@
         }
         
         button:hover {
-            background-color: var(--accent-color);
+            background-color: var(--accent-color); /* Verde Scuro (hover) */
         }
         
         .gallery {
@@ -140,19 +141,19 @@
         
         .gallery-item {
             height: 150px;
-            background-color: var(--primary-color);
+            background-color: var(--primary-color); /* Rosa */
             border-radius: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent-color);
+            color: var(--accent-color); /* Testo Verde Scuro */
             font-weight: bold;
         }
         
         footer {
             text-align: center;
             padding: 20px;
-            color: var(--accent-color);
+            color: var(--accent-color); /* Verde Scuro */
             font-size: 0.9rem;
         }
         
@@ -280,6 +281,9 @@
     </div>
 
     <script>
+        // Lo script è rimasto invariato, ma nota che cerca un ID "rsvpForm"
+        // mentre il tuo form ha una CLASSE "rsvp-form".
+        // Potrebbe essere necessario modificarlo in document.querySelector('.rsvp-form')
         document.getElementById('rsvpForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -290,6 +294,6 @@
             // Reset del form
             this.reset();
         });
-    </script>
+    </Sscript>
 </body>
 </html>
