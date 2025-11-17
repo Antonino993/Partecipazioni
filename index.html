@@ -6,11 +6,13 @@
     <title>Le Nostre Nozze - Partecipazione Digitale</title>
     <style>
         :root {
-            --primary-color: #F7D9E3;   /* Rosa Cipria */
-            --secondary-color: #94B49F;  /* Verde Salvia */
-            --accent-color: #708A7E;    /* Verde Salvia Scuro (per titoli e hover) */
-            --text-color: #4A574F;      /* Grigio-Verde Scuro (testo) */
-            --light-color: #FCF8F7;     /* Sfondo Rosa Chiarissimo */
+            --primary-color: #FFDDE1;   /* Rosa Pastello Chiaro */
+            --secondary-color: #C8E6C9; /* Verde Pastello Chiaro */
+            --accent-color: #81C784;    /* Verde Pastello Medio (per accenti e hover) */
+            --text-color: #4CAF50;      /* Verde più scuro per il testo principale */
+            --light-text-color: #66BB6A; /* Verde leggermente più chiaro per testo secondario */
+            --background-color: #F8F8F8; /* Sfondo neutro */
+            --white-color: #FFFFFF;
         }
         
         * {
@@ -21,13 +23,18 @@
         }
         
         body {
-            background-color: var(--light-color);
+            background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.6;
+            text-align: center; /* Centra il testo di default */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra orizzontalmente il contenuto */
         }
         
         .container {
             max-width: 800px;
+            width: 100%; /* Occupa tutta la larghezza disponibile su mobile */
             margin: 0 auto;
             padding: 20px;
         }
@@ -35,9 +42,8 @@
         header {
             text-align: center;
             padding: 40px 0;
-            /* Nuovo gradiente da Rosa a Verde */
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
+            background-color: var(--primary-color); /* Sfondo Rosa Pastello */
+            color: var(--text-color); /* Testo Verde per il contrasto */
             border-radius: 10px;
             margin-bottom: 30px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -53,27 +59,30 @@
             font-size: 3rem;
             font-family: 'Playfair Display', serif;
             margin: 20px 0;
+            color: var(--text-color); /* Assicurati che il nome sia leggibile */
         }
         
         .date {
             font-size: 1.5rem;
             margin: 15px 0;
+            color: var(--text-color);
         }
         
         .section {
-            background: white;
+            background: var(--white-color); /* Sfondo sezione bianco */
             padding: 30px;
             margin-bottom: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: left; /* Allinea il testo delle sezioni a sinistra */
         }
         
         h2 {
-            color: var(--accent-color); /* Verde Scuro */
+            color: var(--accent-color); /* Verde Pastello Medio */
             margin-bottom: 20px;
-            text-align: center;
+            text-align: center; /* Centra i titoli delle sezioni */
             font-weight: 400;
-            border-bottom: 1px solid var(--primary-color); /* Sottolineatura Rosa */
+            border-bottom: 1px solid var(--secondary-color); /* Sottolineatura Verde Pastello */
             padding-bottom: 10px;
         }
         
@@ -91,7 +100,7 @@
         
         .detail-item i {
             font-size: 2rem;
-            color: var(--secondary-color); /* Verde Salvia */
+            color: var(--accent-color); /* Verde Pastello Medio */
             margin-bottom: 10px;
         }
         
@@ -103,33 +112,37 @@
         .form-group {
             display: flex;
             flex-direction: column;
+            text-align: left; /* Allinea le etichette del form a sinistra */
         }
         
         label {
             margin-bottom: 5px;
             font-weight: 500;
+            color: var(--light-text-color); /* Testo etichette leggermente più chiaro */
         }
         
         input, select, textarea {
             padding: 12px;
-            border: 1px solid #ddd;
+            border: 1px solid var(--secondary-color); /* Bordo Verde Pastello */
             border-radius: 5px;
             font-size: 1rem;
+            color: var(--text-color);
         }
         
         button {
-            background-color: var(--secondary-color); /* Verde Salvia */
-            color: white;
+            background-color: var(--accent-color); /* Verde Pastello Medio */
+            color: var(--white-color);
             border: none;
             padding: 15px;
             border-radius: 5px;
             font-size: 1.1rem;
             cursor: pointer;
             transition: background-color 0.3s;
+            margin-top: 10px;
         }
         
         button:hover {
-            background-color: var(--accent-color); /* Verde Scuro (hover) */
+            background-color: var(--text-color); /* Verde più scuro per l'hover */
         }
         
         .gallery {
@@ -141,22 +154,23 @@
         
         .gallery-item {
             height: 150px;
-            background-color: var(--primary-color); /* Rosa */
+            background-color: var(--primary-color); /* Rosa Pastello */
             border-radius: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent-color); /* Testo Verde Scuro */
+            color: var(--accent-color);
             font-weight: bold;
         }
         
         footer {
             text-align: center;
             padding: 20px;
-            color: var(--accent-color); /* Verde Scuro */
+            color: var(--light-text-color); /* Verde Pastello più chiaro */
             font-size: 0.9rem;
         }
         
+        /* Media query per mobile */
         @media (max-width: 600px) {
             .couple-names {
                 font-size: 2.2rem;
@@ -168,6 +182,18 @@
             
             .date {
                 font-size: 1.2rem;
+            }
+
+            .container {
+                padding: 15px; /* Riduci il padding generale su mobile */
+            }
+
+            .section {
+                padding: 20px; /* Riduci il padding delle sezioni su mobile */
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr; /* Una colonna su mobile */
             }
         }
     </style>
@@ -197,81 +223,79 @@
         </section>
         
         <section class="section">
-    <h2>Conferma la Tua Partecipazione</h2>
-    <form class="rsvp-form" action="https://formspree.io/f/xrbyljqk" method="POST">
-        <div class="form-group">
-            <label for="name">Nome e Cognome *</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required>
-        </div>
+            <h2>Conferma la Tua Partecipazione</h2>
+            <form class="rsvp-form" action="https://formspree.io/f/xrbyljqk" method="POST">
+                <div class="form-group">
+                    <label for="name">Nome e Cognome *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-        <div class="form-group">
-            <label for="attendance">Parteciperai a:</label>
-            <select id="attendance" name="attendance">
-                <option value="both">Cerimonia e ricevimento</option>
-                <option value="ceremony">Solo cerimonia</option>
-                <option value="reception">Solo ricevimento</option>
-                <option value="none">Purtroppo non posso partecipare</option>
-            </select>
-        </div>
-        
-        <div class="form-group">
-            <label for="guests">Numero di ospiti adulti *</label>
-            <select id="guests" name="guests" required>
-                <option value="" disabled selected>Seleziona</option>
-                <option value="1">Solo io</option>
-                <option value="2">2 persone</option>
-                <option value="3">3 persone</option>
-                <option value="4">4 persone</option>
-                <option value="5">5 persone</option>
-            </select>
-        </div>
-        
-        <div class="form-group">
-            <label for="child">Numero di bambini (dai 2 ai 10 anni) per l'animazione </label>
-            <select id="child" name="child" >
-                <option value="" disabled selected>Seleziona</option>
-                <option value="1">1 bambino</option>
-                <option value="2">2 bambini</option>
-                <option value="3">3 bambini</option>
-            </select>
-        </div>
-        
-        <h3>Per i piccoli ospiti che saranno presenti, e per poter organizzare al meglio i posti a sedere e l'animazione, vi chiediemo di specificare le vostre preferenze:</h3>
-        
-        <div class="form-group">
-            <label for="choise">I nostri figli siederanno a tavono con noi o andranno con l'animatore </label>
-            <select id="choise" name="choise" >
-                <option value="" disabled selected>Seleziona</option>
-                <option value="1">Seduti con noi</option>
-                <option value="2">Con l'animatore</option>
-                <option value="3">Uno seduto con noi mentre l'altro andrà con l'animatore</option>
-            </select>
-        </div>
+                <div class="form-group">
+                    <label for="attendance">Parteciperai a:</label>
+                    <select id="attendance" name="attendance">
+                        <option value="both">Cerimonia e ricevimento</option>
+                        <option value="ceremony">Solo cerimonia</option>
+                        <option value="reception">Solo ricevimento</option>
+                        <option value="none">Purtroppo non posso partecipare</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Numero di ospiti adulti *</label>
+                    <select id="guests" name="guests" required>
+                        <option value="" disabled selected>Seleziona</option>
+                        <option value="1">Solo io</option>
+                        <option value="2">2 persone</option>
+                        <option value="3">3 persone</option>
+                        <option value="4">4 persone</option>
+                        <option value="5">5 persone</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="child">Numero di bambini (dai 2 ai 10 anni) per l'animazione </label>
+                    <select id="child" name="child" >
+                        <option value="" disabled selected>Seleziona</option>
+                        <option value="1">1 bambino</option>
+                        <option value="2">2 bambini</option>
+                        <option value="3">3 bambini</option>
+                    </select>
+                </div>
+                
+                <h3 style="text-align: center; margin-top: 25px; color: var(--accent-color);">Per i piccoli ospiti che saranno presenti, e per poter organizzare al meglio i posti a sedere e l'animazione, vi chiediemo di specificare le vostre preferenze:</h3>
+                
+                <div class="form-group">
+                    <label for="choise">I nostri figli siederanno a tavono con noi o andranno con l'animatore </label>
+                    <select id="choise" name="choise" >
+                        <option value="" disabled selected>Seleziona</option>
+                        <option value="1">Seduti con noi</option>
+                        <option value="2">Con l'animatore</option>
+                        <option value="3">Uno seduto con noi mentre l'altro andrà con l'animatore</option>
+                    </select>
+                </div>
 
-        <div class="form-group">
-            <label for="menuchild">I nostri figli desiderano usufruire del menù bambini </label>
-            <select id="menuchild" name="menuchild" >
-                <option value="" disabled selected>Seleziona</option>
-                <option value="1">Si</option>
-                <option value="2">No</option>
-                <option value="3">Uno si, uno no</option>
-            </select>
-        </div>
-        
-        <div class="form-group">
-            <label for="message">Note su allegie/intolleranze o richieste speciali</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-        </div>
-        
-        <button type="submit">Invia Conferma</button>
-    </form>
-</section>
-        
+                <div class="form-group">
+                    <label for="menuchild">I nostri figli desiderano usufruire del menù bambini </label>
+                    <select id="menuchild" name="menuchild" >
+                        <option value="" disabled selected>Seleziona</option>
+                        <option value="1">Si</option>
+                        <option value="2">No</option>
+                        <option value="3">Uno si, uno no</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Note su allergie/intolleranze o richieste speciali</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                
+                <button type="submit">Invia Conferma</button>
+            </form>
         </section>
         
         <footer>
@@ -281,19 +305,19 @@
     </div>
 
     <script>
-        // Lo script è rimasto invariato, ma nota che cerca un ID "rsvpForm"
-        // mentre il tuo form ha una CLASSE "rsvp-form".
-        // Potrebbe essere necessario modificarlo in document.querySelector('.rsvp-form')
-        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+        // Ho corretto qui: selezioniamo il form con la classe.
+        document.querySelector('.rsvp-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Qui normalmente invieresti i dati a un server
+            // In una vera applicazione, qui faresti una fetch() o XMLHttpRequest
+            // per inviare i dati al tuo endpoint Formspree.
 
             alert('Grazie per la tua conferma! Ti aspettiamo al nostro matrimonio.');
             
             // Reset del form
             this.reset();
         });
-    </Sscript>
+    </script>
 </body>
 </html>
