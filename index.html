@@ -6,12 +6,12 @@
     <title>Le Nostre Nozze - Partecipazione Digitale</title>
     <style>
         :root {
-            --primary-color: #FFDDE1;   /* Rosa Pastello Chiaro */
-            --secondary-color: #C8E6C9; /* Verde Pastello Chiaro */
-            --accent-color: #81C784;    /* Verde Pastello Medio (per accenti e hover) */
-            --text-color: #4CAF50;      /* Verde più scuro per il testo principale */
-            --light-text-color: #66BB6A; /* Verde leggermente più chiaro per testo secondario */
-            --background-color: #F8F8F8; /* Sfondo neutro */
+            /* Palette Rosa Antico e Verde Salvia */
+            --primary-color: #A3B18A;   /* Verde Salvia (per l'header) */
+            --secondary-color: #E0B6B9; /* Rosa Antico (per bottoni e dettagli) */
+            --accent-color: #D1A3A8;    /* Rosa Antico Scuro (per titoli e hover) */
+            --text-color: #4A574F;      /* Grigio-Verde Scuro (Testo) */
+            --background-color: #F9F7F5; /* Sfondo neutro (Beige chiarissimo) */
             --white-color: #FFFFFF;
         }
         
@@ -26,15 +26,15 @@
             background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.6;
-            text-align: center; /* Centra il testo di default */
+            text-align: center; 
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centra orizzontalmente il contenuto */
+            align-items: center; 
         }
         
         .container {
             max-width: 800px;
-            width: 100%; /* Occupa tutta la larghezza disponibile su mobile */
+            width: 100%; 
             margin: 0 auto;
             padding: 20px;
         }
@@ -42,8 +42,8 @@
         header {
             text-align: center;
             padding: 40px 0;
-            background-color: var(--primary-color); /* Sfondo Rosa Pastello */
-            color: var(--text-color); /* Testo Verde per il contrasto */
+            background-color: var(--primary-color); /* Sfondo Verde Salvia */
+            color: var(--white-color); /* Testo Bianco per contrasto */
             border-radius: 10px;
             margin-bottom: 30px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -59,30 +59,30 @@
             font-size: 3rem;
             font-family: 'Playfair Display', serif;
             margin: 20px 0;
-            color: var(--text-color); /* Assicurati che il nome sia leggibile */
+            color: var(--white-color);
         }
         
         .date {
             font-size: 1.5rem;
             margin: 15px 0;
-            color: var(--text-color);
+            color: var(--white-color);
         }
         
         .section {
-            background: var(--white-color); /* Sfondo sezione bianco */
+            background: var(--white-color); 
             padding: 30px;
             margin-bottom: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: left; /* Allinea il testo delle sezioni a sinistra */
+            text-align: left; 
         }
         
         h2 {
-            color: var(--accent-color); /* Verde Pastello Medio */
+            color: var(--accent-color); /* Rosa Antico Scuro */
             margin-bottom: 20px;
-            text-align: center; /* Centra i titoli delle sezioni */
+            text-align: center; 
             font-weight: 400;
-            border-bottom: 1px solid var(--secondary-color); /* Sottolineatura Verde Pastello */
+            border-bottom: 1px solid var(--secondary-color); /* Sottolineatura Rosa Antico */
             padding-bottom: 10px;
         }
         
@@ -100,7 +100,7 @@
         
         .detail-item i {
             font-size: 2rem;
-            color: var(--accent-color); /* Verde Pastello Medio */
+            color: var(--secondary-color); /* Rosa Antico */
             margin-bottom: 10px;
         }
         
@@ -112,25 +112,25 @@
         .form-group {
             display: flex;
             flex-direction: column;
-            text-align: left; /* Allinea le etichette del form a sinistra */
+            text-align: left; 
         }
         
         label {
             margin-bottom: 5px;
             font-weight: 500;
-            color: var(--light-text-color); /* Testo etichette leggermente più chiaro */
+            color: var(--accent-color); /* Rosa Antico Scuro */
         }
         
         input, select, textarea {
             padding: 12px;
-            border: 1px solid var(--secondary-color); /* Bordo Verde Pastello */
+            border: 1px solid var(--secondary-color); /* Bordo Rosa Antico */
             border-radius: 5px;
             font-size: 1rem;
             color: var(--text-color);
         }
         
         button {
-            background-color: var(--accent-color); /* Verde Pastello Medio */
+            background-color: var(--secondary-color); /* Rosa Antico */
             color: var(--white-color);
             border: none;
             padding: 15px;
@@ -142,7 +142,7 @@
         }
         
         button:hover {
-            background-color: var(--text-color); /* Verde più scuro per l'hover */
+            background-color: var(--accent-color); /* Rosa Antico Scuro (hover) */
         }
         
         .gallery {
@@ -154,19 +154,19 @@
         
         .gallery-item {
             height: 150px;
-            background-color: var(--primary-color); /* Rosa Pastello */
+            background-color: var(--secondary-color); /* Rosa Antico */
             border-radius: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent-color);
+            color: var(--white-color);
             font-weight: bold;
         }
         
         footer {
             text-align: center;
             padding: 20px;
-            color: var(--light-text-color); /* Verde Pastello più chiaro */
+            color: var(--accent-color); /* Rosa Antico Scuro */
             font-size: 0.9rem;
         }
         
@@ -185,15 +185,15 @@
             }
 
             .container {
-                padding: 15px; /* Riduci il padding generale su mobile */
+                padding: 15px; 
             }
 
             .section {
-                padding: 20px; /* Riduci il padding delle sezioni su mobile */
+                padding: 20px; 
             }
 
             .details-grid {
-                grid-template-columns: 1fr; /* Una colonna su mobile */
+                grid-template-columns: 1fr; 
             }
         }
     </style>
@@ -305,14 +305,10 @@
     </div>
 
     <script>
-        // Ho corretto qui: selezioniamo il form con la classe.
         document.querySelector('.rsvp-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Qui normalmente invieresti i dati a un server
-            // In una vera applicazione, qui faresti una fetch() o XMLHttpRequest
-            // per inviare i dati al tuo endpoint Formspree.
-
+            // Simula l'invio
             alert('Grazie per la tua conferma! Ti aspettiamo al nostro matrimonio.');
             
             // Reset del form
