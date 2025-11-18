@@ -182,7 +182,7 @@
         footer {
             text-align: center;
             padding: 30px 20px;
-            color: #6B8E6B(--accent-color);
+            color: #6B8E6B;
             font-size: 0.9rem;
         }
         
@@ -403,11 +403,11 @@
 
     <script>
         document.querySelector('.rsvp-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+            // Non preveniamo più l'invio del form
+            // Il form verrà inviato normalmente a Formspree
             
+            // Mostriamo comunque un messaggio di conferma
             alert('Grazie per la tua conferma! Ti aspettiamo al nostro matrimonio.');
-            
-            this.reset();
         });
     </script>
 </body>
