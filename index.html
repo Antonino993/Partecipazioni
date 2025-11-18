@@ -317,8 +317,8 @@
             <h2>Conferma la Tua Partecipazione</h2>
             <form class="rsvp-form" action="https://formspree.io/f/xrbyljqk" method="POST">
                 <div class="form-group">
-                    <label for="name">Nome e Cognome *</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="nome">Nome e Cognome *</label>
+                    <input type="text" id="nome" name="nome" required>
                 </div>
                 
                 <div class="form-group">
@@ -327,18 +327,18 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="attendance">Parteciperai a:</label>
-                    <select id="attendance" name="attendance">
-                        <option value="both">Cerimonia e ricevimento</option>
-                        <option value="ceremony">Solo cerimonia</option>
-                        <option value="reception">Solo ricevimento</option>
-                        <option value="none">Purtroppo non posso partecipare</option>
+                    <label for="partecipo_a">Parteciperai a:</label>
+                    <select id="partecipo_a" name="partecipo_a">
+                        <option value="entrambi">Cerimonia e ricevimento</option>
+                        <option value="cerimonia">Solo cerimonia</option>
+                        <option value="ricevimento">Solo ricevimento</option>
+                        <option value="non_vengo">Purtroppo non posso partecipare</option>
                     </select>
                 </div>
                 
                 <div class="form-group">
-                    <label for="guests">Numero di ospiti adulti *</label>
-                    <select id="guests" name="guests" required>
+                    <label for="n_ospiti">Numero di ospiti adulti *</label>
+                    <select id="n_ospiti" name="n_ospiti" required>
                         <option value="" disabled selected>Seleziona</option>
                         <option value="1">Solo io</option>
                         <option value="2">2 persone</option>
@@ -349,8 +349,8 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="child">Numero di bambini (dai 2 ai 10 anni) per l'animazione</label>
-                    <select id="child" name="child">
+                    <label for="bambini">Numero di bambini (dai 2 ai 10 anni) per l'animazione</label>
+                    <select id="bambini" name="bambini">
                         <option value="" disabled selected>Seleziona</option>
                         <option value="0">Nessun bambino</option>
                         <option value="1">1 bambino</option>
@@ -364,22 +364,22 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="choise">I nostri figli siederanno a tavola con noi o andranno con l'animatore</label>
-                    <select id="choise" name="choise">
+                    <label for="scelta_animatore">I nostri figli siederanno a tavola con noi o andranno con l'animatore</label>
+                    <select id="scelta_animatore" name="scelta_animatore">
                         <option value="" disabled selected>Seleziona</option>
-                        <option value="1">Seduti con noi</option>
-                        <option value="2">Con l'animatore</option>
-                        <option value="3">Uno seduto con noi mentre l'altro andrà con l'animatore</option>
+                        <option value="tavolo">Seduti con noi</option>
+                        <option value="animatore">Con l'animatore</option>
+                        <option value="1_tav_1_ani">Uno seduto con noi mentre l'altro andrà con l'animatore</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="menuchild">I nostri figli desiderano usufruire del menù bambini</label>
+                    <label for="menu">I nostri figli desiderano usufruire del menù bambini</label>
                     <select id="menuchild" name="menuchild">
                         <option value="" disabled selected>Seleziona</option>
-                        <option value="1">Sì</option>
-                        <option value="2">No</option>
-                        <option value="3">Uno sì, uno no</option>
+                        <option value="si">Sì</option>
+                        <option value="no">No</option>
+                        <option value="1_si_1_no">Uno sì, uno no</option>
                     </select>
                 </div>
                 
